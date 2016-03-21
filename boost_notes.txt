@@ -1,0 +1,11 @@
+Boost Graph Library
+
+-Boost Graph Library is a generic interface that allows access to a graph's structure, but hides the details of the implementation
+-“open” interface: any graph library that implements this interface will be interoperable with the BGL generic algorithms and with other algorithms that also use this interface
+-Boost Graph Library is a header-only library and does not need to be built to be used
+-be sure to compile with optimization -02 or -03
+-The BGL currently provides two graph classes and an edge list adaptor
+adjacency_list
+adjacency_matrix
+edge_list
+-
