@@ -1,0 +1,5 @@
+-Magick++ is the object-oriented C++ API to the GraphicsMagick image-processing library, the most comprehensive open-source image processing package available. Read the ChangeLog for Magick++
+-Magick++ provides integrated support for the Standard Template Library (STL) which is part of the standard C++ language 
+-Magick++ provides a simple C++ API to the GraphicsMagick image processing library which supports reading and writing a huge number of image formats
+-all symbols contained in Magick++ are included by the header <Magick++.h>
+-InitializeMagick() function MUST be invoked before constructing any Magick++ objects
