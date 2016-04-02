@@ -27,5 +27,5 @@ void Voter::setDorm(string dormVal) {
 }
 
 void Voter::print(){
-	cout << candidate << endl << age << endl << gender << endl << dorm << endl;
+	cout << age << endl << gender << endl << candidate << endl << dorm << endl;
 }
