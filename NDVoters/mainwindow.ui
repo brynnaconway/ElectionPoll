@@ -17,27 +17,30 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>250</x>
       <y>10</y>
-      <width>291</width>
-      <height>61</height>
+      <width>181</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#00aa7f;&quot;&gt;NDVoters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:24pt; font-weight:600; color:#00aa7f;&quot;&gt;NDVoters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_pic">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>110</y>
-      <width>421</width>
-      <height>261</height>
+      <x>240</x>
+      <y>70</y>
+      <width>208</width>
+      <height>242</height>
      </rect>
     </property>
     <property name="text">
@@ -53,10 +56,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="CandidateDrop">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>111</width>
-      <height>41</height>
+      <x>50</x>
+      <y>130</y>
+      <width>123</width>
+      <height>26</height>
      </rect>
     </property>
     <property name="currentText">
@@ -86,9 +89,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="GenderDrop">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>111</width>
+      <x>50</x>
+      <y>160</y>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
@@ -111,11 +114,205 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="DormDrop">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>50</x>
       <y>190</y>
-      <width>111</width>
-      <height>41</height>
+      <width>121</width>
+      <height>26</height>
      </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Dorm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Alumni</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Badin</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Breen-Phillips</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Carroll</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cavanaugh</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dillon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Duncan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Farley</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fisher</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Howard</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Keenan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Keough</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Knott</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lewis</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lyons</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>McGlinn</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Morrissey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>O'Neill</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pangborn</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pasquerilla East</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Paswuerilla West</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ryan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>St.Edward's</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Siegfried</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sorin</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Stanford</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Walsh</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Welsh Family</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Zahm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Off Campus</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="graphButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>320</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create Graph</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quitButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>410</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearButton">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear Graph</string>
     </property>
    </widget>
   </widget>
@@ -125,13 +322,14 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>841</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNDVOTERS">
     <property name="title">
      <string>NDVOTERS</string>
     </property>
+    <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuNDVOTERS"/>
   </widget>
@@ -144,6 +342,11 @@ p, li { white-space: pre-wrap; }
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

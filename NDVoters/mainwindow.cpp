@@ -16,3 +16,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_actionQuit_triggered()
+{
+    qApp->quit();
+}
+
+void MainWindow::on_quitButton_clicked()
+{
+    qApp->quit();
+}
