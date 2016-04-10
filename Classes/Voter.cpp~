@@ -26,31 +26,22 @@ void Voter::setDorm(string dormVal) {
 	dorm = dormVal; 
 }
 
-void Voter::setParty(string partyVal) { 
-	party = partyVal; 
-}
-
 void Voter::print(){
-	cout << candidate << endl << age << endl << gender << endl << dorm << endl << party << endl;
+	cout << candidate << endl << age << endl << gender << endl << dorm << endl;
 }
 
 string Voter::getCandidate(){
-	return (candidate);
+	return(candidate)
 }
 
 string Voter::getGender(){
-	return (gender);
+	return(gender)
 }
 
 string Voter::getDorm(){
-	return (dorm);
+	return(dorm)
 }
 
 string Voter::getAge(){
-	return (age);
+	return(age)
 }
-
-string Voter::getParty() { 
-	return party; 
-}
-

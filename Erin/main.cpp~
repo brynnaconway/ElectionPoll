@@ -6,7 +6,7 @@
 
 int main(){
 
-	Vote<int> v1;
+	Vote<string> v1;
 	v1.print();	
 
 }
