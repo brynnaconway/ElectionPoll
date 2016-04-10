@@ -1,4 +1,7 @@
-all:	Candidate.o 
+all:	main
+
+main: main.o Candidate.o Voter.o
+	g++ main.o Candidate.o Voter.o -o main
 
 main.o: main.cpp
 	g++ -c main.cpp
