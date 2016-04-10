@@ -31,8 +31,11 @@ int main() {
 	for (int j = 0; j < voters.size() -1; j ++){
 	
 		voters[j]->print();
+		cout << endl;
 	}
-	//if (strcmp
+	
+	Candidate trump("Donald Trump", voters);
+	
 return 0;
 }
 

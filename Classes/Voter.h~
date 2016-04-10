@@ -11,6 +11,7 @@ class Voter {
 		void setGender(string genderVal);
 		void setCandidate(string candidateVal);
 		void setDorm(string dormVal);
+		void print();
 	private: 
 		string age; 
 		string gender; 
