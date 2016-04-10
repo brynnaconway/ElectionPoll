@@ -9,23 +9,21 @@ class Voter {
 		Voter();
 		void setAge(string ageVal);
 		void setGender(string genderVal);
-<<<<<<< HEAD
 		void setCandidate(string candidateVal ); 
-		void setDorm(string dormVal); 
-=======
-		void setCandidate(string candidateVal);
 		void setDorm(string dormVal);
+		void setParty(string partyVal); 
 		string getCandidate();
 		string getGender();
 		string getDorm();
 		string getAge();
+		string getParty(); 
 		void print();
->>>>>>> 18aed1c095c13afa078003e9dfbd7699cd31b3a2
 	private: 
 		string age; 
 		string gender; 
 		string candidate;
 		string dorm; 
+		string party; 
 };
 
 #endif 

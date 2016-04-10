@@ -8,7 +8,7 @@
 int main() { 
 	vector <Voter *> voters;
 	string file = "results.dat"; // sets the file to the correct one 
-	string candidate, age, gender, dorm, garbage; 
+	string candidate, age, gender, dorm, party, garbage; 
 	ifstream myfile(file.c_str() ); //this will input the file 
 	Voter *voter;
 	int i = 0; 
@@ -18,6 +18,7 @@ int main() {
 			getline(myfile, age, ',');
 			getline(myfile, gender, ',');
 			getline(myfile, dorm, ',');
+			getline(myfile, party, ','); 
 			getline(myfile, garbage, '\n'); 
 			voter = new Voter; 
 			voters.push_back(voter);
@@ -25,6 +26,7 @@ int main() {
 			voters[i]->setAge(age); 
 			voters[i]->setGender(gender); 
 			voters[i]->setDorm(dorm); 
+			voters[i]->setParty(party); 
 			i++;
 		}
 	}
@@ -35,7 +37,10 @@ int main() {
 	}
 	
 	Candidate trump("Donald Trump", voters);
-	Candidate rubio("Marco Rubio", voters);
+	Candidate clinton("Hillary Clinton", voters); 
+	Candidate kasich("John Kasich", voters); 
+	Candidate cruz("Ted Cruz", voters); 
+	Candidate sanders("Bernie Sanders", voters); 
 	
 return 0;
 }
