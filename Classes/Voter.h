@@ -7,10 +7,14 @@ using namespace std;
 class Voter { 
 	public: 
 		Voter();
+		void setAge(string ageVal);
+		void setGender(string genderVal);
+		void setCandidate(string candidateVal ); 
+		void setDorm(string dormVal); 
 	private: 
-		int age; 
+		string age; 
 		string gender; 
-		string cand;
+		string candidate;
 		string dorm; 
 };
 
