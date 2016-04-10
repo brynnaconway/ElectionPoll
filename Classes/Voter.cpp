@@ -29,3 +29,19 @@ void Voter::setDorm(string dormVal) {
 void Voter::print(){
 	cout << candidate << endl << age << endl << gender << endl << dorm << endl;
 }
+
+string Voter::getCandidate(){
+	return (candidate);
+}
+
+string Voter::getGender(){
+	return (gender);
+}
+
+string Voter::getDorm(){
+	return (dorm);
+}
+
+string Voter::getAge(){
+	return (age);
+}

@@ -33,7 +33,10 @@ int main() {
 		voters[j]->print();
 		cout << endl;
 	}
-	//if (strcmp
+	
+	Candidate trump("Donald Trump", voters);
+	Candidate rubio("Marco Rubio", voters);
+	
 return 0;
 }
 
