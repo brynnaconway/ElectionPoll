@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "qcustomplot.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,8 +20,9 @@ public:
 private slots:
     void on_actionQuit_triggered();
 
-    void on_pushButton_clicked();
+    void on_quitButton_clicked();
 
+    void makePlot();
 private:
     Ui::MainWindow *ui;
 };
