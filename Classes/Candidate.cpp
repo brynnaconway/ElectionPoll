@@ -29,10 +29,10 @@ int Candidate::countVotes(vector<Voter *> voter){
 	string genderChoice = "Male";
 	string ageChoice = "20";
 	string dormChoice = "Farley";
-	string partyChoice = "Republican Party";
+	string partyChoice = "Democratic Party";
 	for (int i=0; i < voter.size(); i++){
 		if (name.compare( voter[i]->getCandidate() ) == 0){
-			cout << "party choice: " << partyChoice << " get: " << voter[i]->getParty();
+			//cout << "party choice: " << partyChoice << " get: " << voter[i]->getParty();
 			if (GENDER == 1 && genderChoice.compare( voter[i]->getGender() ) != 0){
 				continue;
 			}
