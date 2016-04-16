@@ -30,11 +30,11 @@ int main() {
 			i++;
 		}
 	}
-	for (int j = 0; j < voters.size() -1; j ++){
+	/*for (int j = 0; j < voters.size() -1; j ++){
 	
 		voters[j]->print();
 		cout << endl;
-	}
+	}*/
 	cout << "trump" << endl;
 	Candidate trump("Donald Trump", voters);
 	trump.countVotes(voters);

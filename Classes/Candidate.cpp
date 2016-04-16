@@ -22,12 +22,12 @@ int Candidate::getTotal(){
 
 int Candidate::countVotes(vector<Voter *> voter){
 	total_votes = 0;
-	int GENDER = 0;
-	int AGE = 0;
+	int GENDER = 1;
+	int AGE = 1;
 	int DORM = 0;
 	int PARTY = 1;
 	string genderChoice = "Male";
-	string ageChoice = "20";
+	string ageChoice = "30";
 	string dormChoice = "Farley";
 	string partyChoice = "Democratic Party";
 	for (int i=0; i < voter.size(); i++){
