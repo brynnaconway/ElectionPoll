@@ -35,12 +35,21 @@ int main() {
 		voters[j]->print();
 		cout << endl;
 	}
-	
+	cout << "trump" << endl;
 	Candidate trump("Donald Trump", voters);
+	trump.countVotes(voters);
+	cout << "clinton" << endl;
 	Candidate clinton("Hillary Clinton", voters); 
+	//clinton.countVotes(voters);
+	cout << "kasich" << endl;
 	Candidate kasich("John Kasich", voters); 
+	//kasich.countVotes(voters);
+	cout << "cruz" << endl;
 	Candidate cruz("Ted Cruz", voters); 
+	//cruz.countVotes(voters);
+	cout << "sanders" << endl;
 	Candidate sanders("Bernie Sanders", voters); 
+	//sanders.countVotes(voters);
 	
 return 0;
 }

@@ -8,6 +8,8 @@
 class Candidate { 
 	public:
 		Candidate(string, vector<Voter *>);
+		int getTotal(); 
+		int countVotes(vector<Voter *>);
 	private: 
 		int female_votes;
 		int male_votes; 

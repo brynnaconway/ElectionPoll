@@ -51,6 +51,6 @@ string Voter::getAge(){
 }
 
 string Voter::getParty() { 
-	return party; 
+	return (party); 
 }
 
