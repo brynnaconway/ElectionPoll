@@ -49,7 +49,7 @@ int main() {
 	//cruz.countVotes(voters);
 	cout << "sanders" << endl;
 	Candidate sanders("Bernie Sanders", voters); 
-	//sanders.countVotes(voters);
+	//sanders.countVotes(voters); 
 	
 return 0;
 }
