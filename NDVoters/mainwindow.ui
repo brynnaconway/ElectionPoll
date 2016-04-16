@@ -17,10 +17,10 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>240</x>
       <y>10</y>
-      <width>181</width>
-      <height>41</height>
+      <width>251</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -30,40 +30,65 @@
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:24pt; font-weight:600; color:#00aa7f;&quot;&gt;NDVoters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#00aa7f;&quot;&gt;NDVoters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="CandidateDrop">
+   <widget class="QComboBox" name="AgeDrop">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>130</y>
+      <y>80</y>
       <width>123</width>
-      <height>26</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="currentText">
-     <string>Candidates</string>
+     <string>Age</string>
     </property>
     <item>
      <property name="text">
-      <string>Candidates</string>
+      <string>Age</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Leah</string>
+      <string>18</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Brynna</string>
+      <string>19</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Erin</string>
+      <string>20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>23</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>25</string>
      </property>
     </item>
    </widget>
@@ -71,7 +96,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>160</y>
+      <y>130</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -96,9 +121,9 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>190</y>
+      <y>180</y>
       <width>121</width>
-      <height>26</height>
+      <height>31</height>
      </rect>
     </property>
     <item>
@@ -275,8 +300,8 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>570</x>
       <y>410</y>
-      <width>61</width>
-      <height>21</height>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -286,8 +311,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="clearButton">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>10</y>
+      <x>590</x>
+      <y>30</y>
       <width>113</width>
       <height>32</height>
      </rect>
@@ -306,6 +331,36 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
    </widget>
+   <widget class="QComboBox" name="PartyDrop">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>230</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Political Party</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Republican Party</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Democratic Party</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Item</string>
+     </property>
+    </item>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -313,7 +368,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>841</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNDVOTERS">
