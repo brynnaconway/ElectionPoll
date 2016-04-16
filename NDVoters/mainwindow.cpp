@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setStyleSheet("background-image: url(:/images/background.jpg);");
     MainWindow::makePlot();
 }
 
