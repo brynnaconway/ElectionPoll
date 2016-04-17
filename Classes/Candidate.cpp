@@ -4,6 +4,7 @@
 #include "Voter.h"
 #include "Candidate.h" 
 
+
 /* temporary constructor for compiling purposes; values for variables will actually be based on */
 Candidate::Candidate(string n, vector<Voter *> voter) {
 	name = n;
