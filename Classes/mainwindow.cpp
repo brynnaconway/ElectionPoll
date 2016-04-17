@@ -7,6 +7,7 @@
 #include <vector>
 #include "Voter.h"
 #include <QString>
+#include <QPaintEvent>
 using namespace std;
 
 
@@ -39,22 +40,16 @@ MainWindow::MainWindow(QWidget *parent) :
         }
     }
 
-    cout << "trump" << endl;
-    Candidate trump("Donald Trump", voters);
-    trump.countVotes(voters);
-    cout << "clinton" << endl;
-    Candidate clinton("Hillary Clinton", voters);
-    clinton.countVotes(voters);
-    cout << "kasich" << endl;
-    Candidate kasich("John Kasich", voters);
-    kasich.countVotes(voters);
-    cout << "cruz" << endl;
-    Candidate cruz("Ted Cruz", voters);
-    cruz.countVotes(voters);
-    cout << "sanders" << endl;
-    Candidate sanders("Bernie Sanders", voters);
-    sanders.countVotes(voters);
-    sandersVotes = sanders.getTotal();
+    trump = new Candidate("Donald Trump", voters);
+    trump->countVotes(voters);
+    clinton = new Candidate("Hillary Clinton", voters);
+    clinton->countVotes(voters);
+    kasich = new Candidate("John Kasich", voters);
+    kasich->countVotes(voters);
+    cruz = new Candidate("Ted Cruz", voters);
+    cruz->countVotes(voters);
+    sanders = new Candidate("Bernie Sanders", voters);
+    sanders->countVotes(voters);
 
     ui->setupUi(this);
     QPixmap bkgrnd("./background.jpg");
@@ -70,6 +65,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    delete sanders;
+    delete trump;
+    delete clinton;
+    delete cruz;
+    delete kasich;
     delete ui;
 }
 
@@ -84,20 +84,22 @@ void MainWindow::on_quitButton_clicked()
 }
 
 void MainWindow::makePlot() {
+    ui->customPlot->clearPlottables();
     // create empty bar chart objects:
     QCPBars *votes = new QCPBars(ui->customPlot->xAxis, ui->customPlot->yAxis);
     ui->customPlot->addPlottable(votes);
+
     // set names and colors:
     QPen pen;
     pen.setWidthF(1.2);
     votes->setName("Votes");
-    pen.setColor(QColor(255, 131, 0));
+    pen.setColor(QColor(49,49,185));
     votes->setPen(pen);
-    votes->setBrush(QColor(255, 131, 0, 50));
+    votes->setBrush(QColor(49, 49, 185, 50));
 
-    // stack bars ontop of each other:
-    //nuclear->moveAbove(fossil);
-    //regen->moveAbove(nuclear);
+    // set background to transparent
+    ui->customPlot->setBackground(Qt::lightGray);
+    ui->customPlot->axisRect()->setBackground(Qt::white);
 
     // prepare x axis with candidate labels:
     QVector<double> ticks;
@@ -112,10 +114,10 @@ void MainWindow::makePlot() {
     ui->customPlot->xAxis->setSubTickCount(0);
     ui->customPlot->xAxis->setTickLength(0, 4);
     ui->customPlot->xAxis->grid()->setVisible(true);
-    ui->customPlot->xAxis->setRange(0, 8);
+    ui->customPlot->xAxis->setRange(0, 6);
 
     // prepare y axis:
-    ui->customPlot->yAxis->setRange(0, voters.size());
+    ui->customPlot->yAxis->setRange(0, voters.size()/2);
     ui->customPlot->yAxis->setPadding(5); // a bit more space to the left border
     ui->customPlot->yAxis->setLabel("Number of Votes");
     ui->customPlot->yAxis->grid()->setSubGridVisible(true);
@@ -128,28 +130,17 @@ void MainWindow::makePlot() {
 
     // Add data:
     QVector<double> votesData;
-    cout << "sanders total: " << sanders.getTotal() << endl;
-    votesData  << sandersVotes << clinton.getTotal() << cruz.getTotal() << kasich.getTotal() << trump.getTotal();
+    votesData  << sanders->getTotal() << clinton->getTotal() << cruz->getTotal() << kasich->getTotal() << trump->getTotal();
     votes->setData(ticks, votesData);
 
-    // setup legend:
-   // ui->customPlot->legend->setVisible(true);
-    //ui->customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
-    /*ui->customPlot->legend->setBrush(QColor(255, 255, 255, 200));
-    QPen legendPen;
-    legendPen.setColor(QColor(130, 130, 130, 200));
-    ui->customPlot->legend->setBorderPen(legendPen);
-    QFont legendFont = font();
-    legendFont.setPointSize(10);
-    ui->customPlot->legend->setFont(legendFont);
-    ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);*/
+
+    ui->customPlot->replot();
 }
 
 // make graph button
 void MainWindow::on_graphButton_clicked()
 {
     makePlot();
-    cout << "hi" << endl;
 }
 
 // clear button (display graph with default values)
@@ -160,24 +151,79 @@ void MainWindow::on_clearButton_clicked()
 
 void MainWindow::on_AgeDrop_currentIndexChanged(const QString &arg1)
 {
-    //ageString = AgeDrop->setCurrentIndex()
 
     int ageIndex;
     ageIndex = ui->AgeDrop->currentIndex();
     string ageString = ui->AgeDrop->itemText(ageIndex).toStdString();
 
+    sanders->setAgeChoice(ageString);
+    clinton->setAgeChoice(ageString);
+    trump->setAgeChoice(ageString);
+    kasich->setAgeChoice(ageString);
+    cruz->setAgeChoice(ageString);
 
-    sanders.setAgeChoice(ageString);
-    clinton.setAgeChoice(ageString);
-    trump.setAgeChoice(ageString);
-    kasich.setAgeChoice(ageString);
-    cruz.setAgeChoice(ageString);
-
-    sanders.countVotes(voters);
-    //clinton.countVotes(voters);
-    /*trump.countVotes(voters);
-    kasich.countVotes(voters);
-    cruz.countVotes(voters);*/
+    sanders->countVotes(voters);
+    clinton->countVotes(voters);
+    trump->countVotes(voters);
+    kasich->countVotes(voters);
+    cruz->countVotes(voters);
 
 
+}
+
+void MainWindow::on_GenderDrop_currentIndexChanged(const QString &arg1)
+{
+    int genderIndex;
+    genderIndex = ui->GenderDrop->currentIndex();
+    string genderString = ui->GenderDrop->itemText(genderIndex).toStdString();
+
+    sanders->setGenderChoice(genderString);
+    clinton->setGenderChoice(genderString);
+    trump->setGenderChoice(genderString);
+    kasich->setGenderChoice(genderString);
+    cruz->setGenderChoice(genderString);
+
+    sanders->countVotes(voters);
+    clinton->countVotes(voters);
+    trump->countVotes(voters);
+    kasich->countVotes(voters);
+    cruz->countVotes(voters);
+}
+
+void MainWindow::on_DormDrop_currentIndexChanged(const QString &arg1)
+{
+    int dormIndex;
+    dormIndex = ui->DormDrop->currentIndex();
+    string dormString = ui->DormDrop->itemText(dormIndex).toStdString();
+
+    sanders->setDormChoice(dormString);
+    clinton->setDormChoice(dormString);
+    trump->setDormChoice(dormString);
+    kasich->setDormChoice(dormString);
+    cruz->setDormChoice(dormString);
+
+    sanders->countVotes(voters);
+    clinton->countVotes(voters);
+    trump->countVotes(voters);
+    kasich->countVotes(voters);
+    cruz->countVotes(voters);
+}
+
+void MainWindow::on_PartyDrop_currentIndexChanged(const QString &arg1)
+{
+    int partyIndex;
+    partyIndex = ui->PartyDrop->currentIndex();
+    string partyString = ui->PartyDrop->itemText(partyIndex).toStdString();
+
+    sanders->setPartyChoice(partyString);
+    clinton->setPartyChoice(partyString);
+    trump->setPartyChoice(partyString);
+    kasich->setPartyChoice(partyString);
+    cruz->setPartyChoice(partyString);
+
+    sanders->countVotes(voters);
+    clinton->countVotes(voters);
+    trump->countVotes(voters);
+    kasich->countVotes(voters);
+    cruz->countVotes(voters);
 }

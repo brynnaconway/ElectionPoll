@@ -8,12 +8,10 @@
 Candidate::Candidate(string n, vector<Voter *> voter) {
 	name = n;
 	total_votes = 0;
-	for (int i = 0 ; i<voter.size(); i++){
-		if (name.compare( voter[i]->getCandidate() ) == 0){ //they match 
-			total_votes++; //increment the total number of votes for this candidate 
-		}
-	}
-	cout << total_votes << endl;
+    ageChoice = "Age";
+    dormChoice = "Dorm";
+    genderChoice = "Gender";
+    partyChoice = "Political Party";
 }
 
 Candidate::Candidate() {
@@ -28,36 +26,38 @@ void Candidate::setAgeChoice(string ageString) {
     ageChoice = ageString;
 }
 
+void Candidate::setDormChoice(string dormString) {
+    dormChoice = dormString;
+}
+
+void Candidate::setPartyChoice(string partyString) {
+    partyChoice = partyString;
+}
+
+void Candidate::setGenderChoice(string genderString) {
+    genderChoice = genderString;
+}
+
 void Candidate::countVotes(vector<Voter *> voter){
 	total_votes = 0;
-	int GENDER = 0;
-	int AGE = 0;
-	int DORM = 0;
-    int PARTY = 1;
-	string genderChoice = "Male";
-	string dormChoice = "Farley";
-	string partyChoice = "Democratic Party";
     int i;
-    //cout << "size: " << voter.size() << endl << "name: " << name << endl;
     for (i=0; i < voter.size(); i++){
 		if (name.compare( voter[i]->getCandidate() ) == 0){
-           // cout << "age choice: " << ageChoice << endl;
-			//cout << "party choice: " << partyChoice << " get: " << voter[i]->getParty();
-			if (GENDER == 1 && genderChoice.compare( voter[i]->getGender() ) != 0){
+            if (genderChoice.compare("Gender") != 0 && genderChoice.compare( voter[i]->getGender() ) != 0){
 				continue;
 			}
-            if (AGE == 1 && ageChoice.compare( voter[i]->getAge() ) !=0){
+            if (ageChoice.compare("Age") != 0 && ageChoice.compare( voter[i]->getAge() ) !=0){
+
+                continue;
+			}
+            if (dormChoice.compare("Dorm") != 0 && dormChoice.compare( voter[i]->getDorm() ) !=0){
 				continue;
 			}
-			if (DORM == 1 && dormChoice.compare( voter[i]->getDorm() ) !=0){
-				continue;
-			}
-			if (PARTY == 1 && partyChoice.compare( voter[i]->getParty() ) !=0){
+            if (partyChoice.compare("Political Party") != 0 && partyChoice.compare( voter[i]->getParty() ) !=0){
 				continue;
 			}
 			total_votes++;
 		}
 	}
-    cout << "total votes: " << total_votes << endl;
 
 }

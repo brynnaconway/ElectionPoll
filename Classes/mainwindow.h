@@ -20,7 +20,6 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-
 private slots:
     void on_actionQuit_triggered();
 
@@ -33,14 +32,20 @@ private slots:
     
     void on_AgeDrop_currentIndexChanged(const QString &arg1);
 
+    void on_GenderDrop_currentIndexChanged(const QString &arg1);
+
+    void on_DormDrop_currentIndexChanged(const QString &arg1);
+
+    void on_PartyDrop_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     vector <Voter *> voters;
-    Candidate trump;
-    Candidate sanders;
-    Candidate clinton;
-    Candidate cruz;
-    Candidate kasich;
+    Candidate *trump;
+    Candidate *sanders;
+    Candidate *clinton;
+    Candidate *cruz;
+    Candidate *kasich;
     int sandersVotes;
 
 };
