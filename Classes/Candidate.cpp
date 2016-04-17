@@ -16,27 +16,37 @@ Candidate::Candidate(string n, vector<Voter *> voter) {
 	cout << total_votes << endl;
 }
 
+Candidate::Candidate() {
+    return;
+}
+
 int Candidate::getTotal(){
 	return total_votes;
 }
 
-int Candidate::countVotes(vector<Voter *> voter){
+void Candidate::setAgeChoice(string ageString) {
+    ageChoice = ageString;
+}
+
+void Candidate::countVotes(vector<Voter *> voter){
 	total_votes = 0;
-	int GENDER = 1;
-	int AGE = 1;
+	int GENDER = 0;
+	int AGE = 0;
 	int DORM = 0;
-	int PARTY = 1;
+    int PARTY = 1;
 	string genderChoice = "Male";
-	string ageChoice = "30";
 	string dormChoice = "Farley";
 	string partyChoice = "Democratic Party";
-	for (int i=0; i < voter.size(); i++){
+    int i;
+    //cout << "size: " << voter.size() << endl << "name: " << name << endl;
+    for (i=0; i < voter.size(); i++){
 		if (name.compare( voter[i]->getCandidate() ) == 0){
+           // cout << "age choice: " << ageChoice << endl;
 			//cout << "party choice: " << partyChoice << " get: " << voter[i]->getParty();
 			if (GENDER == 1 && genderChoice.compare( voter[i]->getGender() ) != 0){
 				continue;
 			}
-			if (AGE == 1 && ageChoice.compare( voter[i]->getAge() ) !=0){
+            if (AGE == 1 && ageChoice.compare( voter[i]->getAge() ) !=0){
 				continue;
 			}
 			if (DORM == 1 && dormChoice.compare( voter[i]->getDorm() ) !=0){
@@ -48,5 +58,6 @@ int Candidate::countVotes(vector<Voter *> voter){
 			total_votes++;
 		}
 	}
-	cout << total_votes << endl;
+    cout << "total votes: " << total_votes << endl;
+
 }

@@ -8,14 +8,15 @@
 class Candidate { 
 	public:
 		Candidate(string, vector<Voter *>);
+        Candidate();
 		int getTotal(); 
-		int countVotes(vector<Voter *>);
+        void countVotes(vector<Voter *>);
+        void setAgeChoice(string);
+
 	private: 
-		int female_votes;
-		int male_votes; 
-		int college_votes; 
 		int total_votes;
 		string name;
+        string ageChoice;
 };
 
 #endif 
