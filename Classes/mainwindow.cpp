@@ -11,7 +11,6 @@
 using namespace std;
 
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -88,15 +87,26 @@ void MainWindow::makePlot() {
     ui->customPlot->clearPlottables();
     // create empty bar chart objects:
     QCPBars *votes = new QCPBars(ui->customPlot->xAxis, ui->customPlot->yAxis);
+    QCPBars *votes2 = new QCPBars(ui->customPlot->xAxis, ui->customPlot->yAxis);
+    QCPBarsGroup *group = new QCPBarsGroup(ui->customPlot);
+    group ->append(votes);
+    group ->append(votes2);
     ui->customPlot->addPlottable(votes);
+    ui->customPlot->addPlottable(votes2);
 
     // set names and colors:
     QPen pen;
     pen.setWidthF(1.2);
-    votes->setName("Votes");
+    votes->setName("Males");
     pen.setColor(QColor(49,49,185));
     votes->setPen(pen);
     votes->setBrush(QColor(49, 49, 185, 50));
+
+    pen.setWidthF(1.2);
+    votes2->setName("Females");
+    pen.setColor(QColor(49,49,49));
+    votes2->setPen(pen);
+    votes2->setBrush(QColor(233, 36, 36, 50));
 
     // set background to transparent
     ui->customPlot->setBackground(Qt::lightGray);
@@ -133,6 +143,23 @@ void MainWindow::makePlot() {
     QVector<double> votesData;
     votesData  << sanders->getTotal() << clinton->getTotal() << cruz->getTotal() << kasich->getTotal() << trump->getTotal();
     votes->setData(ticks, votesData);
+    votes->setWidth(0.25);
+    QVector<double> votesData2;
+    votesData2 << sanders->getTotal() << clinton->getTotal() << cruz->getTotal() << kasich->getTotal() << trump->getTotal();
+    votes2->setData(ticks, votesData2);
+    votes2->setWidth(0.25);
+
+    // setup legend:
+    ui->customPlot->legend->setVisible(true);
+    ui->customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignRight);
+    ui->customPlot->legend->setBrush(QColor(255, 255, 255, 200));
+    QPen legendPen;
+    legendPen.setColor(QColor(130, 130, 130, 200));
+    ui->customPlot->legend->setBorderPen(legendPen);
+    QFont legendFont = font();
+    legendFont.setPointSize(10);
+    ui->customPlot->legend->setFont(legendFont);
+    ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 
 
     ui->customPlot->replot();
