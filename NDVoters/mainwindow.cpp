@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    //vector <Voter *> voters;
     string file = "results.dat"; // sets the file to the correct one
     string candidate, age, gender, dorm, party, garbage;
     ifstream myfile(file.c_str() ); //this will input the file
@@ -62,7 +61,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgrnd);
     this->setPalette(palette);
-    //qApp->setStyleSheet("background-image: url(:/images/background.jpg);");
 
     MainWindow::makePlot();
 
@@ -146,7 +144,6 @@ void MainWindow::makePlot() {
 
     // Add data:
     QVector<double> votesData;
-    cout << "Sanders total: " << sanders->getTotal() << endl;
     votesData  << sanders->getTotal() << clinton->getTotal() << cruz->getTotal() << kasich->getTotal() << trump->getTotal();
     votes->setData(ticks, votesData);
     votes->setWidth(0.25);
@@ -162,12 +159,6 @@ void MainWindow::makePlot() {
 void MainWindow::on_graphButton_clicked()
 {
     makePlot();
-}
-
-// clear button (display graph with default values)
-void MainWindow::on_clearButton_clicked()
-{
-    return;
 }
 
 void MainWindow::on_AgeDrop_currentIndexChanged(const QString &arg1)

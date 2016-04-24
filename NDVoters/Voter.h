@@ -17,7 +17,6 @@ class Voter {
 		string getDorm();
 		string getAge();
 		string getParty(); 
-		void print();
 	private: 
 		string age; 
 		string gender; 
