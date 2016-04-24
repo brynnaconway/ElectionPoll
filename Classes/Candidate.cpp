@@ -9,6 +9,7 @@
 Candidate::Candidate(string n, vector<Voter *> voter) {
 	name = n;
 	total_votes = 0;
+    total_votes2 = 0;
     ageChoice = "Age";
     dormChoice = "Dorm";
     genderChoice = "Gender";
@@ -21,6 +22,10 @@ Candidate::Candidate() {
 
 int Candidate::getTotal(){
 	return total_votes;
+}
+
+int Candidate::getTotal2(){
+    return total_votes2;
 }
 
 void Candidate::setAgeChoice(string ageString) {
@@ -39,9 +44,13 @@ void Candidate::setGenderChoice(string genderString) {
     genderChoice = genderString;
 }
 
-void Candidate::countVotes(vector<Voter *> voter){
-	total_votes = 0;
-    int i;
+void Candidate::countVotes(int bar, vector<Voter *> voter){
+    int i, side;
+    side = bar;
+    if (side == 1)
+        total_votes = 0;
+    if (side == 2)
+        total_votes2 = 0;
     for (i=0; i < voter.size(); i++){
 		if (name.compare( voter[i]->getCandidate() ) == 0){
             if (genderChoice.compare("Gender") != 0 && genderChoice.compare( voter[i]->getGender() ) != 0){
@@ -57,7 +66,10 @@ void Candidate::countVotes(vector<Voter *> voter){
             if (partyChoice.compare("Political Party") != 0 && partyChoice.compare( voter[i]->getParty() ) !=0){
 				continue;
 			}
-			total_votes++;
+            if (side == 1)
+                total_votes++;
+            if (side == 2)
+                total_votes2++;
 		}
 	}
 

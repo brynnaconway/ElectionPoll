@@ -11,7 +11,8 @@ class Candidate {
 		Candidate(string, vector<Voter *>);
         Candidate();
 		int getTotal(); 
-        void countVotes(vector<Voter *>);
+        int getTotal2();
+        void countVotes(int, vector<Voter *>);
         void setAgeChoice(string);
         void setPartyChoice(string);
         void setGenderChoice(string);
@@ -19,6 +20,7 @@ class Candidate {
 
 	private: 
 		int total_votes;
+        int total_votes2;
 		string name;
         string ageChoice;
         string partyChoice;

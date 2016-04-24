@@ -39,6 +39,14 @@ private slots:
 
     void on_PartyDrop_currentIndexChanged(const QString &arg1);
 
+    void on_AgeDrop_2_currentIndexChanged(const QString &arg1);
+
+    void on_GenderDrop_2_currentIndexChanged(const QString &arg1);
+
+    void on_DormDrop_2_currentIndexChanged(const QString &arg1);
+
+    void on_PartyDrop_2_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     vector <Voter *> voters;
