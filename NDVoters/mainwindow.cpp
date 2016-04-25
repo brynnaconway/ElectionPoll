@@ -146,7 +146,6 @@ void MainWindow::makePlot() {
 
     // Add data:
     QVector<double> votesData;
-    cout << "Sanders total: " << sanders->getTotal() << endl;
     votesData  << sanders->getTotal() << clinton->getTotal() << cruz->getTotal() << kasich->getTotal() << trump->getTotal();
     votes->setData(ticks, votesData);
     votes->setWidth(0.25);
@@ -164,11 +163,6 @@ void MainWindow::on_graphButton_clicked()
     makePlot();
 }
 
-// clear button (display graph with default values)
-void MainWindow::on_clearButton_clicked()
-{
-    return;
-}
 
 void MainWindow::on_AgeDrop_currentIndexChanged(const QString &arg1)
 {

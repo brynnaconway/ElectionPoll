@@ -29,8 +29,6 @@ private slots:
     void makePlot();
     void on_graphButton_clicked();
     
-    void on_clearButton_clicked();
-    
     void on_AgeDrop_currentIndexChanged(const QString &arg1);
 
     void on_GenderDrop_currentIndexChanged(const QString &arg1);

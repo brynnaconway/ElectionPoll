@@ -14,64 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QComboBox" name="AgeDrop">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>123</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="currentText">
-     <string>Age</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Age</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>18</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>19</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>20</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>21</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>22</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>23</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>24</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>25</string>
-     </property>
-    </item>
-   </widget>
    <widget class="QComboBox" name="GenderDrop">
     <property name="geometry">
      <rect>
@@ -326,64 +268,6 @@
     <item>
      <property name="text">
       <string>Democratic Party</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QComboBox" name="AgeDrop_2">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>160</y>
-      <width>123</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="currentText">
-     <string>Age</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Age</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>18</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>19</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>20</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>21</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>22</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>23</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>24</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>25</string>
      </property>
     </item>
    </widget>
@@ -664,6 +548,116 @@
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; color:#ffffff;&quot;&gt;NDVoters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="AgeDrop">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Age</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>18</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>19</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>23</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>25</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="AgeDrop_2">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>160</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Age</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>18</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>19</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>23</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>25</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
