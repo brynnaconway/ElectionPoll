@@ -1,7 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created: Sun Apr 24 20:40:37 2016
+**      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -32,20 +33,20 @@ class Ui_MainWindow
 public:
     QAction *actionQuit;
     QWidget *centralWidget;
-    QComboBox *AgeDrop;
     QComboBox *GenderDrop;
     QComboBox *DormDrop;
     QPushButton *graphButton;
     QPushButton *quitButton;
     QCustomPlot *customPlot;
     QComboBox *PartyDrop;
-    QComboBox *AgeDrop_2;
     QLabel *label;
     QComboBox *GenderDrop_2;
     QComboBox *DormDrop_2;
     QComboBox *PartyDrop_2;
     QLabel *label_3;
     QLabel *label_2;
+    QComboBox *AgeDrop;
+    QComboBox *AgeDrop_2;
     QMenuBar *menuBar;
     QMenu *menuNDVOTERS;
     QToolBar *mainToolBar;
@@ -60,9 +61,6 @@ public:
         actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        AgeDrop = new QComboBox(centralWidget);
-        AgeDrop->setObjectName(QString::fromUtf8("AgeDrop"));
-        AgeDrop->setGeometry(QRect(20, 160, 123, 31));
         GenderDrop = new QComboBox(centralWidget);
         GenderDrop->setObjectName(QString::fromUtf8("GenderDrop"));
         GenderDrop->setGeometry(QRect(20, 210, 121, 31));
@@ -83,9 +81,6 @@ public:
         PartyDrop = new QComboBox(centralWidget);
         PartyDrop->setObjectName(QString::fromUtf8("PartyDrop"));
         PartyDrop->setGeometry(QRect(20, 310, 121, 31));
-        AgeDrop_2 = new QComboBox(centralWidget);
-        AgeDrop_2->setObjectName(QString::fromUtf8("AgeDrop_2"));
-        AgeDrop_2->setGeometry(QRect(800, 160, 123, 31));
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(30, 120, 71, 21));
@@ -117,6 +112,12 @@ public:
         font1.setBold(true);
         font1.setWeight(75);
         label_2->setFont(font1);
+        AgeDrop = new QComboBox(centralWidget);
+        AgeDrop->setObjectName(QString::fromUtf8("AgeDrop"));
+        AgeDrop->setGeometry(QRect(20, 160, 121, 31));
+        AgeDrop_2 = new QComboBox(centralWidget);
+        AgeDrop_2->setObjectName(QString::fromUtf8("AgeDrop_2"));
+        AgeDrop_2->setGeometry(QRect(800, 160, 121, 31));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -143,19 +144,6 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         actionQuit->setText(QApplication::translate("MainWindow", "Quit", 0, QApplication::UnicodeUTF8));
-        AgeDrop->clear();
-        AgeDrop->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "Age", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "18", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "19", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "20", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "21", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "22", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "23", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "24", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "25", 0, QApplication::UnicodeUTF8)
-        );
-        //AgeDrop->setCurrentText(QApplication::translate("MainWindow", "Age", 0, QApplication::UnicodeUTF8));
         GenderDrop->clear();
         GenderDrop->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "Gender", 0, QApplication::UnicodeUTF8)
@@ -204,19 +192,6 @@ public:
          << QApplication::translate("MainWindow", "Republican Party", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MainWindow", "Democratic Party", 0, QApplication::UnicodeUTF8)
         );
-        AgeDrop_2->clear();
-        AgeDrop_2->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "Age", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "18", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "19", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "20", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "21", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "22", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "23", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "24", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MainWindow", "25", 0, QApplication::UnicodeUTF8)
-        );
-        //AgeDrop_2->setCurrentText(QApplication::translate("MainWindow", "Age", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Left Bar</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         GenderDrop_2->clear();
         GenderDrop_2->insertItems(0, QStringList()
@@ -266,6 +241,30 @@ public:
         );
         label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Right Bar</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:28pt; color:#ffffff;\">NDVoters</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        AgeDrop->clear();
+        AgeDrop->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Age", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "18", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "19", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "20", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "21", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "22", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "23", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "24", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "25", 0, QApplication::UnicodeUTF8)
+        );
+        AgeDrop_2->clear();
+        AgeDrop_2->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Age", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "18", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "19", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "20", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "21", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "22", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "23", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "24", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindow", "25", 0, QApplication::UnicodeUTF8)
+        );
         menuNDVOTERS->setTitle(QApplication::translate("MainWindow", "NDVOTERS", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
