@@ -1,47 +1,58 @@
-
+/*Voter class implementation in order to store information about each voter, including age, gender, dorm, party, and the candidate whom they are voting for */
+ 
 #include <iostream> 
 #include <string>
 #include "Voter.h" 
 using namespace std; 
-/* temporary constructor for compiling purposes; actual constructor will set variables based on reading in from a spreadsheet file generated from a Google form. In a main function, there will be a loop that loops through the file line by line and creates a vector of Voter objects. Each time a line is read, a new Voter object will be created and the data from that line will be used to assign values to the Voter variables */
+
 Voter::Voter() {} 
 
+//set Age for the voter
 void Voter::setAge(string ageVal) { 
 	age = ageVal; 
 }
 
+//set gender for the voter 
 void Voter::setGender(string genderVal) { 
 	gender = genderVal; 
 }
 
+//set candidate the voter is voting for 
 void Voter::setCandidate(string candidateVal) { 
 	candidate = candidateVal; 
 }
 
+//set dorm for the voter
 void Voter::setDorm(string dormVal) { 
 	dorm = dormVal; 
 }
 
+//set the political party for the voter
 void Voter::setParty(string partyVal) { 
 	party = partyVal; 
 }
 
+//return the candidates name for the voter
 string Voter::getCandidate(){
 	return (candidate);
 }
 
+//return the voter's gender
 string Voter::getGender(){
 	return (gender);
 }
 
+//return the voter's dorm
 string Voter::getDorm(){
 	return (dorm);
 }
 
+//return the voter's age
 string Voter::getAge(){
 	return (age);
 }
 
+//return the voter's party 
 string Voter::getParty() { 
 	return (party); 
 }
