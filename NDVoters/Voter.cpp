@@ -1,4 +1,4 @@
-/*Voter class implementation in order to store information about each voter, including age, gender, dorm, party, and the candidate whom they are voting for *//
+/*Voter class implementation in order to store information about each voter, including age, gender, dorm, party, and the candidate whom they are voting for */
  
 #include <iostream> 
 #include <string>
