@@ -1,4 +1,0 @@
--open source C++ library for 3D (volumetric) image processing
-- most basic image processing algorithms, and some more sophisticated ones
--optional viewer that features multiplanar views, animations, vector field views and 3D (OpenGL) multiplanar
--processing operators can be interactively called from the viewer as well as from the UNIX command-line
